@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+ Name : <input type="text" id="txtname" />
+@section Scripts{
+    <script type="text/ecmascript">
+          $(document).ready(function () {
+              $('#txtname').autocomplete({
+                  source: '@Url.Action("Search","Home")'
+              });
+          });
+    </script>
+}
